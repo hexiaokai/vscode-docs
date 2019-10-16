@@ -52,6 +52,12 @@ Once the debugger is activated, you will find **Run|Debug** on the [CodeLens](/b
 
 ![CodeLens](images/java-debugging/java-codelens.gif)
 
+You can also disable the Code Lens if you don't like it. In this case, you could still access the **Run|Debug** easily by hover your `main()` function.
+
+<video autoplay loop muted playsinline controls>
+  <source src="/docs/java/java-debugging/debug-hover.mp4" type="video/mp4">
+</video>
+
 ### Context menu
 
 Another way to start debugging is to right-click a Java file in the File Explorer or editor and select **Run** or **Debug** in the context menu.

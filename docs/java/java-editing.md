@@ -338,12 +338,21 @@ The Problems panel will open when you click the Checkstyle status icon in the St
 ![Set Checkstyle configuration file](images/java-editing/set_config.png)
 
 * To set the configuration file, right-click the `.xml` file and select **Set the Checkstyle Configuration File**.
-* You can also trigger the command **Checksjtyle: Set Checkstyle Configuration File** to choose the configuration file in the File Explorer. You will also see the two built-in configurations:
+* You can also trigger the command **Checksjtyle: Set Checkstyle Configuration File** to choose the configuration file in the File Explorer. The extension looks for a `checkstyle.xml` file in your workspace to make Checkstyle configuration easier. You will also see the two built-in configurations:
 
   * **Google's Check**
   * **Sun's Check**
+* Command **Checkstyle: Set the Checkstyle Configuration** detects potential **Checkstyle** configuration files and list them. You can also provide a configuration file by directly writing a URL in the input box.
 
-The extension looks for a `checkstyle.xml` file in your workspace to make Checkstyle configuration easier.
+<video autoplay loop muted playsinline controls>
+  <source src="/docs/java/java-editing/checkstyle-configuration.mp4" type="video/mp4">
+</video>
+
+You can also set checkstyle version by using command **Checkstyle: Set the Checkstyle Version**. It supports
+* List the latest Checkstyle version from main repo.
+* List all the download versions.
+* List all the supported versions.
+* Mark the currently used version with a check symbol.
 
 ### Check the style and fix the violations
 
