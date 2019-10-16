@@ -1,5 +1,5 @@
 ---
-Order: 14
+Order: 15
 Area: python
 TOCTitle: Settings Reference
 ContentId: d256dc5c-95e9-4c02-a82f-947bf34a3517
@@ -12,14 +12,14 @@ MetaSocialImage: images/tutorial/social.png
 
 The Python Extension for Visual Studio Code is highly configurable. This page describes the key settings you can work with.
 
-Refer to [User and workspace settings](/docs/getstarted/settings.md) to find our more about working with settings in VS Code generally.
+Refer to [User and workspace settings](/docs/getstarted/settings.md) to find out more about working with settings in VS Code generally.
 
 ## General settings
 
 | Setting | Default | Description |
 | --- | --- | --- |
 | python.condaPath | `"conda"` | Path to the `conda` executable. |
-| python.pythonPath | `"python"` | Path to the python interpreter, or the path to a folder containing the Python interpreter. Can use variables like `${workspaceFolder}` and `${workspaceFolder}/.venv`. Using a path to a folder allows anyone working with a project to create an environment in the `.venv` folder as appropriate to their operating system, rather than having to specify an exact platform-dependent path. The `settings.json` file can then be included in a source code repository. |
+| python.pythonPath | `"python"` | Path to the Python interpreter, or the path to a folder containing the Python interpreter. Can use variables like `${workspaceFolder}` and `${workspaceFolder}/.venv`. Using a path to a folder allows anyone working with a project to create an environment in the `.venv` folder as appropriate to their operating system, rather than having to specify an exact platform-dependent path. The `settings.json` file can then be included in a source code repository. |
 | python.pipenvPath | `"pipenv"` | Path to the pipenv executable to use for activation. |
 | python.disableInstallationCheck | `false` | If set to `true`, disables a warning from the extension if no Python interpreter is installed. On macOS, also disables a warning that appears if you're using the OS-installed Python interpreter. It's generally recommended to install a separate interpreter on macOS. |
 | python.venvPath | `""` | Path to a folder, where virtual environments are created. Depending on the virtualization tool used, it can be the project itself: `${workspaceFolder}`, or separate folder for all virtual environments located side by side: `.\envs`, `~/.virtualenvs`, and so on. |
@@ -29,6 +29,7 @@ Refer to [User and workspace settings](/docs/getstarted/settings.md) to find our
 | python.terminal.launchArgs | `[]` | Launch arguments that are given to the Python interpreter when you run a file using commands such as **Python: Run Python File in Terminal**. In the `launchArgs` list, each item is a top-level command-line element that's separated by a space (quoted values that contain spaces are a single top-level element and are thus one item in the list). For example, for the arguments `--a --b --c {"value1" : 1, "value2" : 2}`, the list items should be `["--a", "--b", "--c", "{\"value1\" : 1, \"value2\" : 2}\""]`. Note that Visual Studio code ignores this setting when debugging because it instead uses arguments from your selected debugging configuration in `launch.json`. |
 | python.terminal.executeInFileDir | `false` | Indicates whether to run a file in the file's directory instead of the current folder. |
 | python.terminal.activateEnvironment | `true` | Indicates whether to automatically activate the environment you select using the **Python: Select Interpreter** command. For example, when this setting is `true` and you select a virtual environment, the extension automatically runs the environment's *activate* command (`source env/bin/activate` on macOS/Linux; `env\scripts\activate` on Windows). |
+| python.insidersChannel | `off` | Specifies whether to participate in the Insiders program and the channel to use. Set to `weekly` or `daily` to automatically download and install the latest Insiders builds of the Python extension, which include upcoming features and bug fixes.
 
 ## Workspace symbol (tags) settings
 

@@ -4,7 +4,7 @@ Area: editor
 TOCTitle: IntelliSense
 ContentId: 80f4fa1e-d4c5-42cf-8b12-4b8e88c41c3e
 PageTitle: IntelliSense in Visual Studio Code
-DateApproved: 9/4/2019
+DateApproved: 10/9/2019
 MetaDescription:  Learn about Visual Studio Code IntelliSense (intelligent code completion).
 ---
 # IntelliSense
@@ -60,8 +60,8 @@ VS Code IntelliSense offers different types of completions, including language s
 | ![module](images/intellisense/Namespace_16x.svg) | Modules | `module` |
 | ![property](images/intellisense/Property_16x.svg) | Properties and Attributes | `property` |
 | ![enumeration icon](images/intellisense/EnumItem_16x.svg) | Values and Enumerations | `value`, `enum` |
-| ![color](images/intellisense/Enumerator_16x.svg) | References | `reference` |
-| ![keyword](images/intellisense/IntelliSenseKeyword_16x.svg) | Keywords | `keyword` |
+| ![reference](images/intellisense/Reference_16x.svg) | References | `reference` |
+| ![keyword](images/intellisense/Keyword_16x.svg) | Keywords | `keyword` |
 | ![color](images/intellisense/ColorPalette_16x.svg) | Colors | `color` |
 | ![unit](images/intellisense/Ruler_16x.svg) | Unit | `unit` |
 | ![a square with ellipses forming the bottom show snippet prefix](images/intellisense/Snippet_16x.svg) | Snippet Prefixes | `snippet` |
@@ -190,6 +190,7 @@ IntelliSense is just one of VS Code's powerful features. Read on to learn more:
 * [JavaScript](/docs/languages/javascript.md) - Get the most out of your JavaScript development, including configuring IntelliSense.
 * [Node.js](/docs/nodejs/nodejs-tutorial.md) - See an example of IntelliSense in action in the Node.js walkthrough.
 * [Debugging](/docs/editor/debugging.md) - Learn how to set up debugging for your application.
+* [Creating Language extensions](/api/language-extensions/programmatic-language-features.md) - Learn how to create extensions that add IntelliSense for new programming languages.
 
 ## Common questions
 

@@ -5,7 +5,7 @@ TOCTitle: WSL
 PageTitle: Developing in the Windows Subsystem for Linux with Visual Studio Code
 ContentId: 79bcdbf9-d6a5-4e04-bbee-e7bb71f09f0a
 MetaDescription: Using Visual Studio Code Remote Development with the Windows Subsystem for Linux (WSL)
-DateApproved: 9/4/2019
+DateApproved: 10/9/2019
 ---
 # Developing in WSL
 
@@ -46,7 +46,7 @@ Opening a folder inside the Windows Subsystem for Linux in VS Code is very simil
 
 2. Navigate to a folder you'd like to open in VS Code (including, but not limited to, Windows filesystem mounts like `/mnt/c`)
 
-3. Type **`code .`** in the terminal. When doing this for the first time, you should see VS Code fetching components needed to run in WSL. This should only take short while, and is only needed once.
+3. Type **`code .`** in the terminal. When doing this for the first time, you should see VS Code fetching components needed to run in WSL. This should only take a short while, and is only needed once.
 
     > **Note:** If this command does not work, you may not have added VS Code to your path when it was installed.
 
@@ -124,6 +124,14 @@ See the [debugging](/docs/editor/debugging.md) documentation for details on conf
 ## WSL specific settings
 
 VS Code's local user settings are also reused when you have opened a folder in WSL. While this keeps your user experience consistent, you may want to vary some of these settings between your local machine and WSL. Fortunately, once you have connected to WSL, you can also set WSL specific settings by running the **Preferences: Open Remote Settings** command from the Command Palette (`kbstyle(F1)`) or by selecting the **Remote** tab in the settings editor. These will override any local settings you have in place whenever you open a folder in WSL.
+
+## Advanced: Environment setup script
+
+When VS Code Remote is started in WSL, no shell startup scripts are run. This was done to avoid issues with startup scripts that are tuned for shells. If you want to run additional commands or modify the environment this can be done in a setup script `~/.vscode-server/server-env-setup` (Insiders: `~/.vscode-server-insiders/server-env-setup`). If present, the script is processed before the server is started.
+
+The script needs to be a valid Bourne shell script. Be aware that an invalid script will prevent the server from starting up. If end up with a script that prevents the server to start, you will have to use a regular WSL shell and delete or rename the setup script.
+
+Check the WSL log (Remote WSL: Open WSL Log) for output and errors.
 
 ## Known limitations
 

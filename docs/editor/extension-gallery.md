@@ -4,7 +4,7 @@ Area: editor
 TOCTitle: Extension Marketplace
 ContentId: 319916C4-93F2-471F-B448-FD416736C40C
 PageTitle: Managing Extensions in Visual Studio Code
-DateApproved: 9/4/2019
+DateApproved: 10/9/2019
 MetaDescription: Discover, add, update, disable and uninstall Visual Studio Code extensions (plug-ins) through the Extension Marketplace.
 ---
 # Extension Marketplace
@@ -29,7 +29,7 @@ Each extension in the list includes a brief description, the publisher, the down
 
 ### Install an extension
 
-Click the **Install** button and after a successful install, you'll see a **Reload** button. Clicking on this will restart VS Code to enable the new extension.
+To install an extension, click the **Install** button. Once the installation is complete, the **Install** button will change to the **Manage** gear button.
 
 ### Extension details
 

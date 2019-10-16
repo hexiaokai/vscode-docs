@@ -4,7 +4,7 @@ Area: languages
 TOCTitle: JavaScript
 ContentId: F54BB3D4-76FB-4547-A9D0-F725CEBB905C
 PageTitle: JavaScript Programming with Visual Studio Code
-DateApproved: 9/4/2019
+DateApproved: 10/9/2019
 MetaDescription: Get the best out of Visual Studio Code for JavaScript development
 ---
 
@@ -42,6 +42,7 @@ To define a basic JavaScript project, add a `jsconfig.json` at the root of your 
 ```json
 {
     "compilerOptions": {
+        "module": "commonjs",
         "target": "es6"
     },
     "exclude": [
@@ -321,18 +322,18 @@ To enable ES6 import statements for **React Native**, you need to set the `allow
 
 When you want to use ES6 style imports but some type declaration (typings) files do not yet use ES6 style exports, then set the [TypeScript compiler option](https://www.typescriptlang.org/docs/handbook/compiler-options.html) `allowSyntheticDefaultImports` to true.
 
-```javascript
+```json
 {
-  "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    // This is the line you want to add
-    "allowSyntheticDefaultImports": true
-  },
-  "exclude": [
-    "node_modules",
-    "**/node_modules/*"
-  ]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        // This is the line you want to add
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
 }
 ```
 

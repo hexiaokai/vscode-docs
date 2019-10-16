@@ -4,7 +4,7 @@ Area: editor
 TOCTitle: Variables reference
 ContentId: ff9cd4ea-e3f0-4170-9451-2f2ea2b909ea
 PageTitle: Visual Studio Code Variables Reference
-DateApproved: 9/4/2019
+DateApproved: 10/9/2019
 MetaDescription: Visual Studio Code variable substitution reference
 ---
 # Variables Reference
@@ -28,6 +28,7 @@ The following predefined variables are supported:
 - **${lineNumber}** - the current selected line number in the active file
 - **${selectedText}** - the current selected text in the active file
 - **${execPath}** - the path to the running VS Code executable
+- **${defaultBuildTask}** - the name of the default build task
 
 ### Predefined variables examples
 

@@ -5,7 +5,7 @@ TOCTitle: SSH
 PageTitle: Developing on Remote Machines using SSH and Visual Studio Code
 ContentId: 42e65445-fb3b-4561-8730-bbd19769a160
 MetaDescription: Developing on Remote Machines or VMs using Visual Studio Code Remote Development and SSH
-DateApproved: 9/4/2019
+DateApproved: 10/9/2019
 ---
 # Remote Development using SSH
 
@@ -27,7 +27,11 @@ This lets VS Code provide a **local-quality development experience** — includi
 
 - x86_64 Debian 8+, Ubuntu 16.04+, CentOS / RHEL 7+.
 - ARMv7l (AArch32) Raspbian Stretch/9+ (32-bit).
-- **Experimental** ([VS Code Insiders only](https://code.visualstudio.com/insiders/)): ARMv8l (AArch64) Ubuntu 18.04+ (64-bit).
+
+**Experimental SSH Host Support** ([VS Code Insiders only](https://code.visualstudio.com/insiders/)):
+
+- ARMv8l (AArch64) Ubuntu 18.04+ (64-bit).
+- Windows 10 / Server 2016/2019 (1803+) using the [official OpenSSH Server](https://docs.microsoft.com/windows-server/administration/openssh/openssh_install_firstuse).
 
 Other `glibc` based Linux distributions for x86_64, ARMv7l (AArch32), and ARMv8l (AArch64) should work if they have the needed prerequisites. See the [Remote Development with Linux](/docs/remote/linux.md) article for information prerequisites and tips for getting community supported distributions up and running.
 
@@ -68,6 +72,10 @@ To get started, follow these steps:
 4. After you are connected, you'll be in an empty window. You can then open a folder or workspace on the remote machine using **File > Open...** or **File > Open Workspace...**
 
 5. After a moment, the folder or workspace you selected will open. Install **any extensions** you want to use on this host from the Extensions view.
+
+### Disconnect from a remote host
+
+Close the connection when you finish editing files on the remote host. Simply choose **File > Close Remote Connection** to disconnect from the host. The default configuration does not include a keyboard shortcut for this command. You can also simply exit VS Code to close the remote connection.
 
 ### Remembering hosts you connect to frequently
 
@@ -194,9 +202,9 @@ SSHFS is the most convenient option and does not require any file sync'ing. Howe
 ### Remote - SSH limitations
 
 - Using key based authentication is strongly recommended. Passwords and other tokens entered for [alternate authentication methods](/docs/remote/troubleshooting.md#enabling-alternate-ssh-authentication-methods) are not saved.
-- Windows and macOS SSH hosts are **not** yet supported. (Windows and macOS clients **are** supported.)
+- macOS SSH hosts are **not** yet supported. (macOS clients **are** supported.)
 - Alpine Linux and non-glibc based Linux SSH hosts are not supported.
-- Experimental ARMv8l (AArch64) is available in [VS Code Insiders](https://code.visualstudio.com/insiders/) only.
+- Experimental Windows 10 / Server 2016/2019 and ARMv8l (AArch64) support is available in [VS Code Insiders](https://code.visualstudio.com/insiders/) only.
 - Older (community supported) Linux distributions require workarounds to install the [needed prerequisites](/docs/remote/linux.md).
 - PuTTY is not supported on Windows.
 - If you clone a Git repository using SSH and your SSH key has a passphrase, VS Code's pull and sync features may hang when running remotely. Either use an SSH key without a passphrase, clone using HTTPS, or run `git push` from the command line to work around the issue.
@@ -231,7 +239,7 @@ See [Installing a supported SSH client](/docs/remote/troubleshooting.md#installi
 
 See [Installing a supported SSH server](/docs/remote/troubleshooting.md#installing-a-supported-ssh-server) for details on setting up an SSH server for your host.
 
-### Can I sign into my SSH server with another/additional authentication mechanism like a password?
+### Can I sign in to my SSH server with another/additional authentication mechanism like a password?
 
 Yes, you should be prompted to enter your token or password automatically. However, note that passwords are not saved, so using [key based authentication](/docs/remote/troubleshooting.md#configuring-key-based-authentication) is typically more convenient.
 

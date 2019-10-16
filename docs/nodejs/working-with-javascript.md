@@ -4,7 +4,7 @@ Area: nodejs
 TOCTitle: Working with JavaScript
 PageTitle: Working with JavaScript in Visual Studio Code
 ContentId: 3e5af2a6-7669-4b5d-b19f-78077af14fda
-DateApproved: 9/4/2019
+DateApproved: 10/9/2019
 MetaDescription: Working with JavaScript in Visual Studio Code
 ---
 # Working with JavaScript
@@ -100,7 +100,8 @@ Below is a simple template for `jsconfig.json` file, which defines the JavaScrip
 ```json
 {
     "compilerOptions": {
-        "target": "ES6"
+        "module": "commonjs",
+        "target": "es6"
     },
     "exclude": [
         "node_modules",
@@ -118,7 +119,8 @@ Here is an example with an explicit `include` attribute:
 ```json
 {
     "compilerOptions": {
-        "target": "ES6"
+        "module": "commonjs",
+        "target": "es6"
     },
     "include": [
         "src/**/*"

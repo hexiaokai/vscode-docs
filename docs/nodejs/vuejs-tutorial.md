@@ -4,7 +4,7 @@ Area: nodejs
 TOCTitle: Vue Tutorial
 ContentId: 85ce0bcc-d2b8-4b7c-b744-5eddce9a8d00
 PageTitle: Vue JavaScript Tutorial in Visual Studio Code
-DateApproved: 9/4/2019
+DateApproved: 10/9/2019
 MetaDescription: Vue JavaScript tutorial showing IntelliSense, debugging, and code navigation support in the Visual Studio Code editor.
 ---
 # Using Vue in Visual Studio Code
@@ -67,7 +67,7 @@ The Vetur extension supplies Vue.js language features (syntax highlighting, Inte
 
 ![vetur extension](images/vuejs/vetur-extension.png)
 
-From the notification, press **Install** to download and install the Vetur extension. You should see the Vetur extension **Installing** in the Extensions view. Once the installation is complete (may take several minutes), you will be prompted to **Reload** VS Code with the extension enabled.
+From the notification, press **Install** to download and install the Vetur extension. You should see the Vetur extension **Installing** in the Extensions view. Once the installation is complete (may take several minutes), the **Install** button will change to the **Manage** gear button.
 
 Now you should see that `.vue` is a recognized file type for the Vue language and you have language features such as syntax highlighting, bracket matching, and hover descriptions.
 
